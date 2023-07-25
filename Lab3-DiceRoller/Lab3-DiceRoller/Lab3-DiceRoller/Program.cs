@@ -11,7 +11,7 @@ while (userChoice)
     int nSideDice = 0;
     bool parseGood = int.TryParse(userInput, out nSideDice);
 
-    while (!parseGood)
+    while (!parseGood || nSideDice <= 0)
     {
         Console.WriteLine("Please enter a valid number for the amount of sides on each die for a pair of dice");
         userInput = Console.ReadLine();

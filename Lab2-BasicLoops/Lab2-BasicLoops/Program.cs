@@ -20,12 +20,12 @@ do
 while (userChoice);
 
 bool userChoice2 = true;
-Console.WriteLine("Enter a number: ");
-string userInput2 = Console.ReadLine();
-int userNumber = int.Parse(userInput2);
 
 while(userChoice2)
 {
+    Console.WriteLine("Enter a number: ");
+    string userInput2 = Console.ReadLine();
+    int userNumber = int.Parse(userInput2);
     for (int i = userNumber; i >= 0; i--)
     {
         Console.Write($" {i}");
@@ -40,13 +40,10 @@ while(userChoice2)
     string userInput = Console.ReadLine();
     if (userInput.ToLower() == "n")
     {
-        userChoice2 = false;
+        break;
     }
     else if (userInput.ToLower() == "y")
     {
-        Console.WriteLine("Enter a number: ");
-        userInput2 = Console.ReadLine();
-        userNumber = int.Parse(userInput2);
     }
     else
     {
@@ -81,7 +78,7 @@ while (locked)
 int attempts2 = 0;
 do
 {
-    Console.WriteLine("Please enter the key combination");
+    Console.WriteLine("Please enter the key combination.  You have 5 attempts remaining.");
     string combination2 = Console.ReadLine();
     if (combination2 == "13579")
     {
@@ -91,6 +88,7 @@ do
     else
     {
         attempts2++;
+        Console.WriteLine($"You have {5 - attempts2} attempts remaining.");
     }
 }
 while (attempts2 < 5);
