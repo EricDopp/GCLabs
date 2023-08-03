@@ -1,0 +1,15 @@
+(START)
+/input array of ints/
+|set sum = 0|
+|set num = next array.element|
+<Loop check if num is pos or neg>
+<Check if there are any more nums for loop to continue>
+no => ignore num
+yes => sum num
+|loop sum = sum + num|
+<Check if there are any more nums for loop to continue>
+yes => continue loop
+no => end loop
+|output sum|
+(END)
+
