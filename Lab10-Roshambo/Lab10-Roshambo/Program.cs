@@ -25,9 +25,11 @@ while (userContinue)
     {
         case "rocky":
             computerRoshambo = Rocky.GenerateRoshambo();
+            playerName = Rocky.Name;
             break;
         case "rando":
             computerRoshambo = Rando.GenerateRoshambo();
+            playerName = Rando.Name;
             break;
         default:
             Console.WriteLine("I need this default case here in order for this to work, I don't know why");
@@ -36,33 +38,25 @@ while (userContinue)
     {
         if (roshambo == computerRoshambo)
         {
-            Console.WriteLine($"{Rando.Name}: threw {computerRoshambo}!");
-            Console.WriteLine($"{userName}: threw {roshambo}!");
-            Console.WriteLine("It's a draw.");
             games++;
-            Console.WriteLine($"Wins: {wins} | Losses: {losses} | Games played: {games}");
+            Validator.Scoreboard(wins, losses, games, computerRoshambo, roshambo, userName, playerName);
             userContinue = false;
         }
         else if ((roshambo == Roshambo.ROCK && computerRoshambo == Roshambo.SCISSORS) ||
                 (roshambo == Roshambo.PAPER && computerRoshambo == Roshambo.ROCK) ||
                 (roshambo == Roshambo.SCISSORS && computerRoshambo == Roshambo.PAPER))
         {
-            Console.WriteLine($"{Rando.Name} threw {computerRoshambo}!");
-            Console.WriteLine($"{userName} threw {roshambo}!");
-            Console.WriteLine("You won!");
             wins++;
             games++;
-            Console.WriteLine($"Wins: {wins} | Losses: {losses} | Games played: {games}");
+            Validator.Scoreboard(wins, losses, games, computerRoshambo, roshambo, userName, playerName);
+
             userContinue = false;
         }
         else
         {
-            Console.WriteLine($"{Rando.Name}: threw {computerRoshambo}!");
-            Console.WriteLine($"{userName}: threw {roshambo}!");
-            Console.WriteLine("You lose.");
             losses++;
             games++;
-            Console.WriteLine($"Wins: {wins} | Losses: {losses} | Games played: {games}");
+            Validator.Scoreboard(wins, losses, games, computerRoshambo, roshambo, userName, playerName);
             userContinue = false;
         }
     }

@@ -51,8 +51,11 @@ public class Validator
         }
         return playerName;
     }
-    public void GetRoshambo()
+    public static void Scoreboard(int wins, int losses, int games, Roshambo computerRoshambo, Roshambo roshambo, string userName, string playerName)
     {
-
+        Console.WriteLine($"{playerName}: threw {computerRoshambo}!");
+        Console.WriteLine($"{userName}: threw {roshambo}!");
+        Console.WriteLine("You lose.");
+        Console.WriteLine($"Wins: {wins} | Losses: {losses} | Games played: {games}");
     }
 }
