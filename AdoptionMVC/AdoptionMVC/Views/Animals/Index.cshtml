@@ -1,0 +1,54 @@
+﻿@model List<Animals>
+
+<h1>Animals List</h1>
+
+<style>
+    .custom-card-image {
+        max-width: 200px;
+        max-height: 200px;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 15px; /* Adjust margin as needed */
+    }
+
+    .card {
+        width: calc(33.3333% - 20px); /* Adjust the width of the cards (33.3333% for three columns) */
+        margin-bottom: 0px; /* Adjust margin between cards */
+    }
+</style>
+
+<div class="row">
+    <div class="text-center">
+        <form asp-controller="Animals" asp-action="Index" asp-route-searchTerm="">
+            <div class="input-group mb-3">
+                <input name="searchTerm" type="text" class="form-control" placeholder="Search by breed" aria-label="Search by breed" aria-describedby="basic-addon2">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="card-group">
+        @foreach(var animals in Model)
+        {   
+            <div class="col-3">
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <img src="@animals.img" class="card-img-top mx-auto custom-card-image" alt="Image Not Found">
+                    <div class="card-body">
+                        <h5 class="card-title">@animals.name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@animals.breed.ToString()</h6>
+                        <p class="card-text">@animals.description</p>
+                        <a class="btn-primary btn" href="/Animals/GetByID/@animals.ID">Adopt!</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

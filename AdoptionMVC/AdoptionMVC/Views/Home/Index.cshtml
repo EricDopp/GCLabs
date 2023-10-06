@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<a asp-action="Index" asp-controller="Animals">Animals List</a>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Doppler Adopption™!</h1>
+    <h3>Where the closer you get to a pet, the more likely you are to Adoppt™!</h3>
+    <br />
+    <br />
+    <h4>
+        Please fill out a form if you would like to put an animal up for Adopption™, otherwise, <a asp-action="Index" asp-controller="Animals">navigate to our animals page!</a>
+    </h4>
+</div>
+
+@model Animals
+
+<form method="post" action="/Animals/addAnimal">
+    <div class="form-group">
+        <label asp-for="name">Name: </label>
+        <input asp-for="name" class="form-control" required />
+        <span asp-validation-for="name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="description">Description of animal: </label>
+        <input asp-for="description" class="form-control" required />
+        <span asp-validation-for="description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="breed">Breed: </label>
+        <input asp-for="breed" class="form-control" required />
+        <span asp-validation-for="breed" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="age">Age in years: </label>
+        <input asp-for="age" class="form-control" required />
+        <span asp-validation-for="age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="img">Image URL: </label>
+        <input asp-for="img" class="form-control" type="img" required />
+        <span asp-validation-for="img" class="text-danger"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>
