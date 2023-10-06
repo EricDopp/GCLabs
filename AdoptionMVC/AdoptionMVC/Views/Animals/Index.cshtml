@@ -42,7 +42,7 @@
                 <div class="card text-white bg-dark mb-3" style="width: 18rem;">
                     <img src="@animals.img" class="card-img-top mx-auto custom-card-image" alt="Image Not Found">
                     <div class="card-body">
-                        <h5 class="card-title">@animals.name</h5>
+                        <h5 class="card-title">@animals.name (@animals.age years old)</h5>
                         <h6 class="card-subtitle mb-2 text-muted">@animals.breed.ToString()</h6>
                         <p class="card-text">@animals.description</p>
                         <a class="btn-primary btn" href="/Animals/GetByID/@animals.ID">Adopt!</a>

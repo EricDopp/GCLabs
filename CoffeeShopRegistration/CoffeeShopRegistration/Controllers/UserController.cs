@@ -32,14 +32,14 @@ namespace CoffeeShopRegistration.Controllers
                 return RedirectToAction("Index");
             }
 
-                _appDbContext.Users.Add(newUser);
+            _appDbContext.Users.Add(newUser);
 
-                //This step is easy to forget
-                //This is where it is actually saved to the database. If you don't do this it won't be saved
+            //This step is easy to forget
+            //This is where it is actually saved to the database. If you don't do this it won't be saved
 
-                _appDbContext.SaveChanges();
+            _appDbContext.SaveChanges();
 
-                return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home");
         }
     }
 }
