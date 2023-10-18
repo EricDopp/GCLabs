@@ -1,0 +1,9 @@
+﻿@model List<Child>
+
+    <h1>Pauper's Reddit</h1>
+    @foreach(Child child in Model)
+{
+    <h3>"@child.data.title"</h3>
+    <img src ="@child.data.thumbnail" />
+    <a href ="@child.data.url">Click for more!</a>
+}
