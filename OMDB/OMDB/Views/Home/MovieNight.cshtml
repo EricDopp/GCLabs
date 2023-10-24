@@ -1,0 +1,35 @@
+﻿@model List<Movie>
+
+<head>
+    <title>Movie Night!</title>
+</head>
+<body>
+    <form method="post" asp-controller="Home" asp-action="MovieNightResults">
+        <label for="Title1">1st Movie Title:</label>
+        <input type="text" id="Title1" name="Title1" required><br />
+        <label for="Title2">2nd Movie Title:</label>
+        <input type="text" id="Title2" name="Title2" required><br />
+        <label for="Title3">3rd Movie Title:</label>
+        <input type="text" id="Title3" name="Title3" required><br />
+        <button type="submit">Search</button>
+    </form>
+
+    @if (Model != null)
+    {
+        foreach(var movie in Model)
+        {
+            <h2>@movie.Title (@movie.Year)</h2>
+            <img src="@movie.Poster" alt="@movie.Title">
+            <h3>Released: @movie.Released @movie.Rated</h3>
+            <h3>@movie.Genre</h3>
+            <h4>Directed by: @movie.Director</h4>
+            <h4>Written by: @movie.Writer</h4>
+            <h4>Actors: @movie.Actors</h4>
+            <h5>@movie.Plot</h5>
+        }
+    }
+    else
+    {
+        <p>No results found.</p>
+    }
+</body>
