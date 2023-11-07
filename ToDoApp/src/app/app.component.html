@@ -1,0 +1,24 @@
+"node_modules/bootstrap/dist/css/bootstrap.min.css",
+"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Todo Items</h4>
+    <ul class="list-group">
+      <li class="list-item" *ngFor="let todo of todos; let i = index"
+       [ngStyle]="{ 'color' : todo.completed ? '#A9A9A9' : '#000000',
+                    'background-color' : todo.completed ? '#f3f3f3' : '#ffffff' }">
+        <span [ngClass]="{ 'strikethrough' : todo.completed }">
+          {{todo.task}} 
+        </span>
+        <button class="btn btn-primary" *ngIf="!todo.completed" (click)="completeTask(i)">Complete</button>
+        <span *ngIf="todo.completed">Completed</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- <span [ngStyle]="{'text-decoration': todo.completed ? 'line-through' : 'none'}">{{ todo.task }}</span> -->
+<input type="text" [(ngModel)]="newTask"/>
+<button (click)="addTask()">Submit</button>
+
+<router-outlet></router-outlet>
