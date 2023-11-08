@@ -1,3 +1,40 @@
+<h2>Welcome to Chirpus Pizza!</h2>
+<h3>Home of the best wings and decent pizza</h3>
+<h2>Menu</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of MenuItems">
+      <td>{{ item.Name }}</td>
+      <td>{{ item.Category }}</td>
+      <td>{{ item.Price | currency }}</td>
+    </tr>
+  </tbody>
+</table>
 
+<h2>Items by Category</h2>
+<div *ngFor="let category of getCategories()">
+    <h2>{{ category | uppercase }}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of getByCategory(category)">
+          <td>{{ item.Name }}</td>
+          <td>{{ item.Price | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 <router-outlet></router-outlet>
