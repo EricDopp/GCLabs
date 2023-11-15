@@ -1,0 +1,18 @@
+<div>
+    <h2>Edit User Profile</h2>
+    <form (submit)="saveChanges()">
+      <label for="name">Name:</label>
+      <input [(ngModel)]="editedProfile.name" id="name" name="name" />
+      <label for="contact">Contact:</label>
+      <input [(ngModel)]="editedProfile.contact" id="contact" name="contact" />
+      <label for="bio">Bio:</label>
+      <textarea [(ngModel)]="editedProfile.bio" id="bio" name="bio"></textarea>
+      <button type="submit">Save Changes</button>
+    </form>
+    <div>
+        <h2>Updated User Profile</h2>
+        <p>Name: {{ editedProfile.name }}</p>
+        <p>Contact: {{ editedProfile.contact }}</p>
+        <p>Bio: {{ editedProfile.bio }}</p>
+      </div>
+    </div>

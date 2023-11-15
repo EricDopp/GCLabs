@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="row">
+          <div *ngFor="let pet of pets" class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img [src]="pet.imgUrl" class="card-img-top" alt="...">
+                <!-- <img src={{pet.imgUrl}} class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                <h5 class="card-title">{{pet.name}}</h5>
+                <p class="card-text">{{pet.breed}}</p>
+                <a [routerLink]="['/pet', pet.id]" class="btn btn-primary">Details</a>
+                <a *ngIf="!pet.isAdopted" [routerLink]="['/petform', pet.id]" class="btn btn-primary">Adopt Me!</a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <div class="col-2"></div>
+</div>

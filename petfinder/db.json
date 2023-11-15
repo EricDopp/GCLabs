@@ -1,0 +1,84 @@
+{
+    "pets": [
+      {
+        "id": 1,
+        "name": "Lucky",
+        "breed": "Terrier",
+        "isAdopted": false,
+        "type": "dog",
+        "imgUrl": "assets/dog1.jpg",
+        "description": "A loyal and friendly companion, perfect for families and individuals alike.",
+        "adoptionFee": 122
+      },
+      {
+        "id": 2,
+        "name": "Rover",
+        "breed": "Labrador Retriever",
+        "isAdopted": false,
+        "type": "dog",
+        "imgUrl": "assets/dog2.jpg",
+        "description": "A loyal and friendly companion, perfect for families and individuals alike.",
+        "adoptionFee": 131
+      },
+      {
+        "id": 3,
+        "name": "Fido",
+        "breed": "Mixed Breed",
+        "isAdopted": false,
+        "type": "dog",
+        "imgUrl": "assets/dog3.jpg",
+        "description": "A loyal and friendly companion, perfect for families and individuals alike.",
+        "adoptionFee": 52
+      },
+      {
+        "id": 4,
+        "name": "Lassie",
+        "breed": "Border Collie",
+        "isAdopted": false,
+        "type": "dog",
+        "imgUrl": "assets/dog4.jpg",
+        "description": "A loyal and friendly companion, perfect for families and individuals alike.",
+        "adoptionFee": 105
+      },
+      {
+        "id": 5,
+        "name": "Mittens",
+        "breed": "Calico",
+        "isAdopted": false,
+        "type": "cat",
+        "imgUrl": "assets/cat1.jpg",
+        "description": "An independent and loving pet, ideal for those who appreciate a more laid-back companion.",
+        "adoptionFee": 167
+      },
+      {
+        "id": 6,
+        "name": "Tabby",
+        "breed": "Minx",
+        "isAdopted": false,
+        "type": "cat",
+        "imgUrl": "assets/cat2.jpg",
+        "description": "An independent and loving pet, ideal for those who appreciate a more laid-back companion.",
+        "adoptionFee": 135
+      },
+      {
+        "id": 7,
+        "name": "Shadow",
+        "breed": "Maine",
+        "isAdopted": false,
+        "type": "cat",
+        "imgUrl": "assets/cat3.jpg",
+        "description": "An independent and loving pet, ideal for those who appreciate a more laid-back companion.",
+        "adoptionFee": 199
+      },
+      {
+        "id": 8,
+        "name": "Bonkers",
+        "breed": "Stray",
+        "isAdopted": false,
+        "type": "cat",
+        "imgUrl": "assets/cat4.jpg",
+        "description": "An independent and loving pet, ideal for those who appreciate a more laid-back companion.",
+        "adoptionFee": 82
+      }
+    ]
+  }
